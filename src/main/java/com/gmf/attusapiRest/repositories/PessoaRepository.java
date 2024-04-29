@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.gmf.attusapiRest.entities.Pessoa;
 
 @Repository
-public interface PessoaRepository extends JpaRepository<Pessoa, Long>{
-	@EntityGraph(attributePaths = "enderecos")
+public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
+    @EntityGraph(attributePaths = "enderecos")
     List<Pessoa> findAll();
 
     @EntityGraph(attributePaths = "enderecos")
